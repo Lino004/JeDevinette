@@ -1,0 +1,52 @@
+body{
+	
+}
+#robert{
+	height: 100px;
+}
+.robert_deçu{
+	height: 50px;
+}
+#robert_content{
+	height: 50px;
+}
+.bloc{
+	/*background-color: #fff0f0; */
+	border: 1px black solid;
+	margin: 10px;
+}
+#conteneur1{
+	border: 1px black solid;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	width: 80%;
+	margin: auto;
+	margin-top: 5%;
+}
+#conteneur2{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#conteneur3{
+}
+#bloc1_c2{
+	text-align:center;
+}
+#bloc2_c2{
+	display: flex;
+	
+}
+#bloc3_c2{
+	
+}
+#bloc1_c3{
+	display: flex;
+}
+#bloc2_c3{
+	display: flex;
+}
+#bloc3_c3{
+	display: flex;
+}

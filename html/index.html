@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JeuDevinette</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div id="conteneur1" class="bloc" >
+		<div id="conteneur2" class="bloc">
+			<div id="bloc1_c2" class="bloc">
+				<h1>BIENVENU DANS NOTRE MINI JEU</h1>
+			</div>
+			<div id="bloc2_c2" class="bloc">
+				<img src="../img/Robot_Robert2.png" id="robert">
+				<p>Hello !!! Mon est Robert. Je suis un mini robot intélligent et j'aimerai jouer au dévinette avec toi.<br>Voici le but du jeu : je vais penser à un nombre entre 1 et 100 et tu n'auras qu'à deviner lequel s'est. 
+				Aller !!! C'est parti. 
+				</p>
+			</div>
+			<div id="bloc2_c2" class="bloc" >
+				<label>Entre un nombre entre 1 et 100 :</label>
+				<input type="number" v-model="valeurIn">
+				<input type="button" value="ok" @click="controle">
+			</div>
+		</div>
+		<div id="conteneur3" class="bloc">
+			<div id="bloc1_c3" class="bloc" v-if="controleM1">
+				<img src="../img/Robot_Robert2.png" class="robert_deçu">
+				<p>Hum, ton nombre est trop petit</p>
+			</div>
+			<div id="bloc2_c3" class="bloc" v-if="controleM2">
+				<img src="../img/Robot_Robert2.png" class="robert_deçu">
+				<p>Hum, ton nombre est trop grand</p>
+			</div>
+			<div id="bloc3_c3" class="bloc" v-if="controleM3">
+				<img src="../img/Robot_Robert2.png" id="robert_content">
+				<p>Super tu as trouvé</p>
+			</div>
+		</div>		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+	<script src="../js/app.js"></script>
+</body>
+</html>
