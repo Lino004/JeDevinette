@@ -20,21 +20,14 @@
 			<div id="bloc2_c2" class="bloc" >
 				<label>Entre un nombre entre 1 et 100 :</label>
 				<input type="number" v-model="valeurIn">
-				<input type="button" value="ok" @click="controle">
+				<input type="button" value="ok" v-on:click="controle">
 			</div>
 		</div>
 		<div id="conteneur3" class="bloc">
-			<div id="bloc1_c3" class="bloc" v-if="controleM1">
+			<div id="bloc1_c3" class="bloc">
 				<img src="../img/Robot_Robert2.png" class="robert_deçu">
-				<p>Hum, ton nombre est trop petit</p>
+				<p> {{message}} </p>
 			</div>
-			<div id="bloc2_c3" class="bloc" v-if="controleM2">
-				<img src="../img/Robot_Robert2.png" class="robert_deçu">
-				<p>Hum, ton nombre est trop grand</p>
-			</div>
-			<div id="bloc3_c3" class="bloc" v-if="controleM3">
-				<img src="../img/Robot_Robert2.png" id="robert_content">
-				<p>Super tu as trouvé</p>
 			</div>
 		</div>		
 	</div>

@@ -5,13 +5,17 @@ new Vue({
 
         valeurIn : 0,
         solution : solution = Math.floor(Math.random() * 100) + 1,
-        controleM1 : false,
-        controleM2 : false,
-        controleM3 : false,
+        message : "..."
     },
     methods : {
         controle : function(){
-           controleM1 = true
+            if(this.valeurIn < this.solution){
+                this.message = "Hum, ton nombre est trop petit"
+            }else if(this.valeurIn > this.solution){
+                this.message = "Hum, ton nombre est trop grand"
+            }else{
+                this.message = "Super tu as trouvé"
+            }
         }
     }
 })
