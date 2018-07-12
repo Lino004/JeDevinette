@@ -5,10 +5,13 @@ new Vue({
 
         valeurIn : 0,
         solution : solution = Math.floor(Math.random() * 100) + 1,
-        message : "..."
+        message : "...",
+        show : false
     },
     methods : {
         controle : function(){
+            
+            this.show = !this.show
             if(this.valeurIn < this.solution){
                 this.message = "Hum, ton nombre est trop petit"
             }else if(this.valeurIn > this.solution){

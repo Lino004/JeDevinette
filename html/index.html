@@ -21,14 +21,16 @@
 				<label>Entre un nombre entre 1 et 100 :</label>
 				<input type="number" v-model="valeurIn">
 				<input type="button" value="ok" v-on:click="controle">
+				<label>La solution est : {{solution}} </label>
 			</div>
 		</div>
 		<div id="conteneur3" class="bloc">
-			<div id="bloc1_c3" class="bloc">
-				<img src="../img/Robot_Robert2.png" class="robert_deçu">
-				<p> {{message}} </p>
-			</div>
-			</div>
+			<transition name="fade" :duration="100" >
+				<div id="bloc1_c3" class="bloc" v-if="show" >
+					<img src="../img/Robot_Robert2.png" class="robert_deçu">
+					<p> {{message}} </p>
+				</div>
+			</transition>
 		</div>		
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
