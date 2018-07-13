@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 <body>
+	<nav  style="width: 100%; text-align: center; margin-bottom:100px; padding-bottom:10px;position: fixed;left:0px;top: 0px;background-color: #ffffff;box-shadow:1px 1px 6px #000000; ">
+		<h1>JEU DE SOCIETE + OU -</h1>
+	</nav>
 	<div id="conteneur1" class="bloc" >
 		<div id="conteneur2" class="bloc">
 			<div id="bloc1_c2" class="bloc">
@@ -24,13 +27,13 @@
 			</div>
 		</div>
 		<div id="conteneur3" class="bloc">
-			<transition name="fade" :duration="100" >
-				<div id="bloc1_c3" class="bloc" v-if="show" >
-					<img src="../img/Robot_Robert2.png" class="robert_deçu">
-					<p> {{message}} </p>
+			
+				<div id="bloc1_c3" class="bloc" v-for="mess in message">
+					<img src="../img/Robot_Robert3.png" class="robert_deçu">
+					<p> {{mess}} </p>
 				</div>
-			</transition>
-		</div>		
+			
+		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 	<script src="../js/app.js"></script>

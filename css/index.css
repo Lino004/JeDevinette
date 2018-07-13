@@ -1,5 +1,12 @@
 body{
-	
+    background-image: linear-gradient(white,deepskyblue, deepskyblue, deepskyblue, deepskyblue,white );
+
+    /* Obligatoire si on veut "voir" le dégradé */
+    background-attachment: fixed;
+    font-family: sans-serif;
+    color: aliceblue;
+    border: none;
+    
 }
 #robert{
 	height: 100px;
@@ -12,30 +19,39 @@ body{
 }
 .bloc{
 	/*background-color: #fff0f0; */
-	border: 1px black solid;
 	margin: 10px;
+    border: none;
 }
 #conteneur1{
-	border: 1px black solid;
+	border: 5px white solid;
 	display: flex;
 	justify-content: space-around;
-	flex-direction: column;
 	width: 80%;
 	margin: auto;
-	margin-top: 5%;
+	margin-top: 10%;
+    border: none;
 }
 #conteneur2{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+    width: 60%;
 }
 #conteneur3{
+    width: 40%;
+    height: 300px;
+    overflow: auto;
 }
 #bloc1_c2{
 	text-align:center;
+    border: 5px white outset;
+    border-radius: 5px;
+    background-color: orange;
 }
 #bloc2_c2{
 	display: flex;
+    border: 3px white outset;
+    border-radius: 5px;
 	
 }
 #bloc3_c2{
@@ -43,16 +59,22 @@ body{
 }
 #bloc1_c3{
 	display: flex;
+    border: 3px white outset;
+    border-radius: 5px;
 }
 #bloc2_c3{
 	display: flex;
+    
 }
 #bloc3_c3{
 	display: flex;
 }
-.fade-enter-active, .fade-leave-active {
-	transition: opacity .5s;
+
+h1
+{
+    color: white;
+    font-family : inherit;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-	opacity: 0;
+nav h1{
+	color: black;
 }
